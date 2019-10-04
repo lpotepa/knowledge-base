@@ -1,0 +1,17 @@
+div{
+  data-controller="edit-article"
+  data-edit-article-url="/api/v1/articles"
+  data-edit-article-id="#{params[:id]}"
+}
+  .container.col-lg-5.text-center
+    form
+      .form-group
+        label for="name"
+          | Enter a question:
+        input.form-control id="name" type="text" data-target="edit-article.question"
+      .form-group
+        label for="answer"
+          | Enter an answer:
+        input.form-control id="answer" type="text" data-target="edit-article.answer"
+        button.btn.btn-primary data-action="click->edit-article#update" data-target="edit-article.submit"
+          | Submit

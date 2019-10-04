@@ -1,0 +1,22 @@
+div(
+  data-controller="show-article"
+  data-show-article-url="/api/v1/articles"
+  data-show-article-id="#{params[:id]}"
+)
+  .container.col-lg-3.float-right
+    | Language:
+    select.right.form-control data-action="change->show-article#changeLang"
+      option value="original"
+        | Original
+      - @languages.each do |language|
+        option value=language.iso
+          = language.name
+      end
+  .container.col-lg-2.float-left
+    a.btn.btn-primary href="#{edit_article_path(params[:id])}"
+      | Edit
+    a.btn.btn-danger data-action="click->show-article#deleteArticle" href="#"
+      | Delete
+
+  .container.text-center data-target="show-article.article"
+    

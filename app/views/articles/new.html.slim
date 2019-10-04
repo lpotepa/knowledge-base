@@ -1,0 +1,13 @@
+div data-controller="new-article" data-new-article-url="/api/v1/articles"
+  .container.col-lg-5.text-center
+    form
+      .form-group
+        label for="name"
+          | Enter a question:
+        input.form-control id="name" type="text" data-target="new-article.question"
+      .form-group
+        label for="answer"
+          | Enter an answer:
+        input.form-control id="answer" type="text" data-target="new-article.answer"
+        button.btn.btn-primary data-action="click->new-article#create" data-target="new-article.submit"
+          | Submit
