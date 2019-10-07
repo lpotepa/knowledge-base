@@ -1,5 +1,8 @@
 div data-controller="articles" data-articles-url="/api/v1/articles"
   h1.text-center
     | Latest articles
-  ul.list-group.text-center data-target="articles.articles"
+  .row
+    .container.col.lg-6.float-left.text-center data-target="articles.articles"
+    .container.col-lg-3.float-right
+      = render 'shared/language_dropdown', controller_name: "articles"
 

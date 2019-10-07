@@ -1,0 +1,8 @@
+| Language:
+select.right.form-control data-action="change->#{controller_name}#changeLang"
+  option value="original"
+    | Original
+  - @languages.each do |language|
+    option value=language.iso
+      = language.name
+  end

@@ -1,5 +1,6 @@
 import { Controller } from "stimulus"
 import axios from "axios"
+import translate from '../helpers/translate'
 
 export default class extends Controller {
   static targets = [ "article", "language" ]
@@ -40,20 +41,9 @@ function articleTemplate(article, currentLang) {
     `
   } else {
     return `
-      <p><h2>${translation(article.question, currentLang)}</h2></p>
-      <p>${translation(article.answer, currentLang)}</p>
+      <p><h2>${translate(article.question, currentLang)}</h2></p>
+      <p>${translate(article.answer, currentLang)}</p>
     `
-  }
-}
-
-function translation(resource, currentLang) {
-  let translation =  resource.translations.find((translation) => {
-    return translation.language.iso == currentLang
-  })
-  if (translation.status == "completed") {
-    return translation.content
-  } else {
-    return `Translation status: ${translation.status}`
   }
 }
 
