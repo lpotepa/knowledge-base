@@ -21,6 +21,7 @@ https://knowledge-base-lpotepa.herokuapp.com/
   yarn install
   rake db:create; db:migrate
   rake language:add German de
+  bundle exec sidekiq -d -L log/sidekiq.log
   rails s
  ```
 # Tests
