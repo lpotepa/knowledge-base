@@ -22,7 +22,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'httparty', '~> 0.17.1'
 gem 'jbuilder', '~> 2.7'
 gem 'rubocop', '~> 0.75.0', require: false
-gem 'sidekiq', '~> 5.0.0'
+gem 'sidekiq', '~> 6.4.0'
 gem 'slim-rails', '~> 3.2.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
