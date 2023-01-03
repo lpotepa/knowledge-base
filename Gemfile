@@ -19,7 +19,7 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'bootstrap', '~> 4.3.1'
-gem 'httparty', '~> 0.17.1'
+gem 'httparty', '~> 0.21.0'
 gem 'jbuilder', '~> 2.7'
 gem 'rubocop', '~> 0.75.0', require: false
 gem 'sidekiq', '~> 5.0.0'
